@@ -34,7 +34,7 @@ export const SelectedWork: React.FC<SelectedWorkProps> = ({ projects }) => {
 
           {/* Closing Notice */}
           <div className="pt-12 text-center text-xs font-mono text-textMute">
-            More projects will be added as they're documented.
+            More projects will be added as they&apos;re documented.
           </div>
         </Reveal>
       </div>

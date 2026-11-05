@@ -213,7 +213,7 @@ export default function AboutPage() {
                   B.Sc CSE Undergraduate Dissertation
                 </div>
                 <h3 className="text-xl font-serif text-bone leading-snug">
-                  "Hybrid Deep Learning approach for smartphone sensor-based activity intensity pattern recognition in prognosis of Insomnia"
+                  &ldquo;Hybrid Deep Learning approach for smartphone sensor-based activity intensity pattern recognition in prognosis of Insomnia&rdquo;
                 </h3>
                 <p className="text-sm text-textSoft leading-relaxed font-sans">
                   Submitted as part of B.Sc in Computer Science and Engineering at International Islamic University Chittagong (IIUC). Focuses on feature extraction and neural network classification of accelerometer/gyroscope sensor patterns.

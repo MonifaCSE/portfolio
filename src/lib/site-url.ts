@@ -1,9 +1,9 @@
 /**
- * Utility to retrieve base path for GitHub Pages subpath deployment.
- * Example: "/Portfolio" or "" if deployed at root domain.
+ * Utility to retrieve base path for GitHub Pages deployment.
+ * Example: "/portfolio" or "" if running in development.
  */
 export function getBasePath(): string {
-  const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.NODE_ENV === "production" ? "/portfolio" : "");
   if (!rawBasePath) return "";
   const formatted = rawBasePath.startsWith("/") ? rawBasePath : `/${rawBasePath}`;
   return formatted.endsWith("/") ? formatted.slice(0, -1) : formatted;
@@ -20,7 +20,7 @@ export function getSiteUrl(): string {
     return envUrl.endsWith("/") ? envUrl.slice(0, -1) : envUrl;
   }
   
-  // Safe fallback for local build/dev without custom domain
+  // Safe canonical fallback for local build/dev with repository base path
   const basePath = getBasePath();
-  return `https://username.github.io${basePath}`;
+  return `https://monifacse.github.io${basePath}`;
 }
